@@ -1,3 +1,6 @@
+const Constants = require("../logic/enum")
+const EXBNotice = Constants.EXBNotice
+
 cc.Class({
     extends: cc.Component,
 
@@ -42,5 +45,6 @@ cc.Class({
 
     on_login(event, customEventData){
         console.log("event=", event, "data=", customEventData)
+        cc.log(EXBNotice.Login)
     }
 });

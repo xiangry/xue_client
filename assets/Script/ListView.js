@@ -1,4 +1,3 @@
-
 cc.Class({
     extends: cc.Component,
 
@@ -14,35 +13,38 @@ cc.Class({
         item: {
             default: null,
             type: cc.Prefab
-        }
+        },
+        data: null
     },
 
     // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
     start () {
+        this.data = []
+    },
+
+    onLoad () {
         this.initScrollView();
     },
 
+
     initScrollView(){
-        var height = 0;
-        for (let i = 0; i < 30; i++){
+        var height = 250 + 5;
+        for (let i = 0; i < 12; i++){
             var item = cc.instantiate(this.item);
             item.idx = i;
             // 触摸回调
             item.on(cc.Node.EventType.TOUCH_END, this.btnItemClickHandler, this);
-            // item.getComponent("info_item").setType()
+            item.getComponent("info_item").setInfo("index:" + i)
             this.content.addChild(item)
-            // window.console.log("----", item.height, height)
-            item.y = 500 - height;
-            height += item.height + 5;
+            height -= (item.height + 5);
+            item.y = height;
         }
-        this.content.height = height
+        this.content.height = Math.max(height, 500)
     },
 
-    btnItemClickHandler(){
-        window.console.log("----")
+    btnItemClickHandler(btn){
+        window.console.log(btn)
+        window.console.log(btn.target.idx)
     }
 
     // update (dt) {},

@@ -206,7 +206,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_state": 0,
     "_atlas": null,
     "_id": ""
@@ -252,6 +252,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "label": {
+      "__id__": 3
+    },
     "idx": 0,
     "_id": ""
   },

@@ -3,6 +3,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        label: {
+            default: null,
+            type: cc.Label
+        },
+
         idx: 0
     },
 
@@ -13,6 +18,10 @@ cc.Class({
     start () {
 
     },
+
+    setInfo(msg) {
+        this.label.string = msg;
+    }
 
     // update (dt) {},
 });
