@@ -1,5 +1,4 @@
-const Constants = require("../logic/enum")
-const EXBNotice = Constants.EXBNotice
+const EXBNotice = require("../logic/enum").EXBNotice
 
 cc.Class({
     extends: cc.Component,
