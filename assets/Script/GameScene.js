@@ -13,10 +13,15 @@ cc.Class({
 
     registMsgFunc(){
         var self = this;
-        NoticeManager.BeginListen(EMsgProto.Login, this.showLogin, this)
+        NoticeManager.BeginListen(EMsgProto.Login, this.showLogin, this);
+        NoticeManager.BeginListen(EXBNotice.LoginSuccess, function () {
+            UIManager.PopUi(EUI.LoginPop);
+            UIManager.PushUi(EUI.MainPage);
+        })
     },
 
     showLogin(){
         UIManager.PushUi(EUI.LoginPop);
+        // UIManager.PushUi(EUI.MainPage);
     },
 });

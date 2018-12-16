@@ -11,9 +11,9 @@ var XBDataCenter = cc.Class({
     },
 
     listenServer(){
-        // NoticeManager.BeginListen(EXBNotice.S2CCMD, function (msg) {
-        //
-        // })
+        NoticeManager.BeginListen(EMsgProto.FirstData, function (msg) {
+            NoticeManager.Notice(EXBNotice.LoginSuccess)
+        })
     }
 })
 

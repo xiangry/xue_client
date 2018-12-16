@@ -5,6 +5,7 @@ cc.Class({
     name: "MainPage",
     extends: UIBaseView,
     properties: {
+        prefab: "ui/main_page/main_page",
         lab_name: {default: null, type: cc.Label},
         lab_age: {default: null, type: cc.Label},
         lab_date: {default: null, type: cc.Label},

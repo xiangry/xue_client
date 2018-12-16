@@ -6,16 +6,16 @@ const XBSocket = function(){
 
 XBSocket.prototype.connect = function (func){
     var self = this;
-    this.socket = require("socket.io")("http://localhost:10101");
+    this.socket = require("./socket.io")("http://localhost:10101");
     this.socket.on("*", function (socket) {
         console.log("*  socket ==== ", socket);
         this.isConnected = true;
         if (func){
             func()
-        }
+        };
     })
     this.socket.on("s2ccmd", function (msg) {
-        self.reciveMsg(msg)
+        self.reciveMsg(msg);
     });
 }
 
