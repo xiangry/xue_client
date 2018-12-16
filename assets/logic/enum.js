@@ -1,22 +1,23 @@
-const  EXBId = cc.Enum({
+window.EXBId = cc.Enum({
 
 });
 
-const EXBNotice = cc.Enum({
+window.EXBNotice = cc.Enum({
     Login: "login",
     LoginSuccess: "login_success",
     UpdateExp: "update_exp",
+    S2CCMD: "s2c_cmd",
 });
 
-const EXBValue = cc.Enum({
+window.EXBValue = cc.Enum({
 
 });
 
-const EXBStatus = cc.Enum({
+window.EXBStatus = cc.Enum({
     Learn: 1,
 })
 
-module.exports = {
+window.XBEnum = {
     EXBId: EXBId,
     EXBNotice: EXBNotice,
     EXBConst: EXBValue,
