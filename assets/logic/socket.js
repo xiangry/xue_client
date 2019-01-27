@@ -4,9 +4,12 @@ const XBSocket = function(){
     this._is_onnected = false;
 }
 
+var server_path = "http://39.105.186.20:10101"
+// server_path = "http://localhost:10101"
+
 XBSocket.prototype.connect = function (func){
     var self = this;
-    this.socket = require("./socket.io")("http://localhost:10101");
+    this.socket = require("./socket.io")(server_path);
     this.socket.on("*", function (socket) {
         console.log("*  socket ==== ", socket);
         this.isConnected = true;
