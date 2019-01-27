@@ -1,13 +1,17 @@
 window.EUI = {
     LoginPop: "LoginPop",
+    RegisterPop: "RegisterPop",
     MainPage: "MainPage",
     Loading: "Loading",
+    Float: "Float",
 }
 
 var ui_config = {
     LoginPop: {path: "login/login_pop", class: require("../Script/login/login_pop")},
+    RegisterPop: {path: "login/register", class: require("../Script/login/register_pop")},
     MainPage: {path: "main_page/main_page", class: require("../Script/main_page/main_page")},
     Loading: {path: "pops/loading", class: require("../Script/pops/loading")},
+    Float: {path: "pops/float", class: require("../Script/pops/float")},
 }
 
 // for(var key in ui_config){
@@ -31,7 +35,7 @@ XBUiManager.prototype.PushUi = function(name, params){
 
     var cfg = ui_config[name]
     if(cfg){
-        var view = new cfg.class();
+        var view = new cfg.class(params);
         this.uiStacks.push({
             name: name,
             view: view

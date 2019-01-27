@@ -4,8 +4,8 @@ const XBSocket = function(){
     this._is_onnected = false;
 }
 
-var server_path = "http://39.105.186.20:10101"
-// server_path = "http://localhost:10101"
+// var server_path = "http://39.105.186.20:10101"
+var server_path = "http://localhost:10101"
 
 XBSocket.prototype.connect = function (func){
     var self = this;

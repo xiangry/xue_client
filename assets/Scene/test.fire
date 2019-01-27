@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3892264269394519,
-      "y": 0.3892264269394519,
-      "z": 0.3892264269394519
+      "x": 0.475146484375,
+      "y": 0.475146484375,
+      "z": 0.475146484375
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -68,9 +68,6 @@
     "_children": [
       {
         "__id__": 3
-      },
-      {
-        "__id__": 5
       }
     ],
     "_active": true,
@@ -138,12 +135,16 @@
     "_parent": {
       "__id__": 2
     },
-    "_children": [],
+    "_children": [
+      {
+        "__id__": 4
+      }
+    ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 4
+        "__id__": 6
       }
     ],
     "_prefab": null,
@@ -192,6 +193,36 @@
     "_id": "c9h57faFpHLK3tqktY20/y"
   },
   {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 3
+    },
+    "_id": "59DTvXcTZLsqxoGN9wZ9aA",
+    "_prefab": {
+      "__id__": 5
+    },
+    "_name": "float",
+    "_active": true,
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 4
+    },
+    "asset": {
+      "__uuid__": "f486f306-297d-4766-9ad8-a812e744d0a2"
+    },
+    "fileId": "30j2y0uHtNy6a2EGGTiYsw",
+    "sync": true
+  },
+  {
     "__type__": "cc.Camera",
     "_name": "",
     "_objFlags": 0,
@@ -224,36 +255,6 @@
       "height": 1
     },
     "_id": "c49oaU5GFJNJkwS+8Md93n"
-  },
-  {
-    "__type__": "cc.Node",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 2
-    },
-    "_id": "30j2y0uHtNy6a2EGGTiYsw",
-    "_prefab": {
-      "__id__": 6
-    },
-    "_name": "loading",
-    "_active": true,
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 5
-    },
-    "asset": {
-      "__uuid__": "bf19c3d9-96c3-4ede-85c5-e74fb367a478"
-    },
-    "fileId": "30j2y0uHtNy6a2EGGTiYsw",
-    "sync": true
   },
   {
     "__type__": "cc.Canvas",

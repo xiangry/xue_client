@@ -12,6 +12,11 @@ CC_UTIL.find_button = function (path, referenceNode) {
     return cc.find(path, referenceNode).getComponent(cc.Button);
 }
 
+CC_UTIL.find_anim = function (path, referenceNode) {
+    return cc.find(path, referenceNode).getComponent(cc.Animation);
+}
+
+
 
 
 CC_UTIL.load_prefab = function (path, fn, parent) {

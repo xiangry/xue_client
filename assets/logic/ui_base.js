@@ -5,8 +5,9 @@ const UIBaseView = cc.Class({
         prefab: "",
     },
     path: "",
-    ctor(){
+    ctor(params){
         var self = this;
+        this.params = params
         CC_UTIL.load_prefab(this.prefab, function (fabNode) {
             self.rootNode = fabNode;
             self.onLoad();
