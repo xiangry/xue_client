@@ -16,8 +16,14 @@ var XBDataCenter = cc.Class({
         this.package = new PackageData();
 
         this.listenServer();
+    },
 
+    GetPlayer: function(){
+        return this.player;
+    },
 
+    GetPackage: function(){
+        return this.package;
     },
 
     listenServer(){
