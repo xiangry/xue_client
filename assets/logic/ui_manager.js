@@ -4,6 +4,7 @@ window.EUI = {
     MainPage: "MainPage",
     Loading: "Loading",
     Float: "Float",
+    MessagePop: "MessagePop",
 }
 
 var ui_config = {
@@ -12,6 +13,7 @@ var ui_config = {
     MainPage: {path: "main_page/main_page", class: require("../Script/main_page/main_page")},
     Loading: {path: "pops/loading", class: require("../Script/pops/loading")},
     Float: {path: "pops/float", class: require("../Script/pops/float")},
+    MessagePop: {path: "pops/message_pop", class: require("../Script/pops/message_pop")},
 }
 
 // for(var key in ui_config){
@@ -40,6 +42,7 @@ XBUiManager.prototype.PushUi = function(name, params){
             name: name,
             view: view
         })
+        Staticstics.PushUI(name)   // 统计
     }
     else {
         console.log("PushUi not find ui setting ");
@@ -58,6 +61,7 @@ XBUiManager.prototype._popUiByIndex= function(index){
     if (index != undefined) {
         let ui = this.uiStacks[index];
         if(ui){
+            Staticstics.PopUI(ui.name)      // 统计
             console.log("pop ui ", ui.name);
             this.uiStacks.splice(index);
             ui.view.close();

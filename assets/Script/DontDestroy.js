@@ -16,7 +16,7 @@ cc.Class({
 
     start () {
         XBScheduler.setComponent(this);
-
+        console.log("do connect -----  ")
         XBScheduler.scheduleOnce(function () {
             XBSocket.connect();
         }, 1)

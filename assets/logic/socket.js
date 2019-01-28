@@ -1,14 +1,16 @@
 require("./message")
+require("./socket")
 
 const XBSocket = function(){
     this._is_onnected = false;
 }
 
-// var server_path = "http://39.105.186.20:10101"
-var server_path = "http://localhost:10101"
+var server_path = "http://39.105.186.20:10101"
+// var server_path = "http://localhost:10101"
 
 XBSocket.prototype.connect = function (func){
     var self = this;
+    console.log("will connect server", server_path)
     this.socket = require("../Script/socket.io")(server_path);
     this.socket.on("*", function (socket) {
         console.log("*  socket ==== ", socket);
