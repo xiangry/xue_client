@@ -3,7 +3,8 @@
  */
 
 
-require("../logic/game")
+
+require("./util/game")
 
 
 
@@ -17,8 +18,10 @@ cc.Class({
     start () {
         XBScheduler.setComponent(this);
 
-        XBScheduler.scheduleOnce(function () {
-            XBSocket.connect();
-        }, 1)
+        UIManager.PushUi(EUI.Launch)
+
+        // XBScheduler.scheduleOnce(function () {
+        //     XBSocket.connect();
+        // }, 1)
     },
 });

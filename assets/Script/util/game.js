@@ -3,6 +3,7 @@ require("./global");
 require("./cc_util");
 require("./ui_base");
 require("./scheduler");
+require("../config")
 
 const socket = require("./socket");
 const notice_manager = require("./notice_manager");

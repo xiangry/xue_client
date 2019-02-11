@@ -9,7 +9,7 @@ var server_path = "http://localhost:10101"
 
 XBSocket.prototype.connect = function (func){
     var self = this;
-    this.socket = require("../Script/socket.io")(server_path);
+    this.socket = require("../socket.io")(server_path);
     this.socket.on("*", function (socket) {
         console.log("*  socket ==== ", socket);
         this.isConnected = true;

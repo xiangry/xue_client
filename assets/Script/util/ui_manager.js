@@ -4,14 +4,16 @@ window.EUI = {
     MainPage: "MainPage",
     Loading: "Loading",
     Float: "Float",
+    Launch: "Launch",
 }
 
 var ui_config = {
-    LoginPop: {path: "login/login_pop", class: require("../Script/login/login_pop")},
-    RegisterPop: {path: "login/register", class: require("../Script/login/register_pop")},
-    MainPage: {path: "main_page/main_page", class: require("../Script/main_page/main_page")},
-    Loading: {path: "pops/loading", class: require("../Script/pops/loading")},
-    Float: {path: "pops/float", class: require("../Script/pops/float")},
+    LoginPop: {path: "login/login_pop", class: require("../ui/login/login_pop")},
+    RegisterPop: {path: "login/register", class: require("../ui/login/register_pop")},
+    MainPage: {path: "main_page/main_page", class: require("../ui/main_page/main_page")},
+    Loading: {path: "pops/loading", class: require("../ui/pops/loading")},
+    Float: {path: "pops/float", class: require("../ui/pops/float")},
+    Launch: {path: "launch/launch", class: require("../ui/launch/launch")},
 }
 
 // for(var key in ui_config){

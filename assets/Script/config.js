@@ -1,0 +1,4 @@
+window.CLIENT_VERSION = 101;
+window.RESOURCE_VERSION = 10001;
+window.SERVER_IP = 10001;
+window.SERVER_PORT = 10001;

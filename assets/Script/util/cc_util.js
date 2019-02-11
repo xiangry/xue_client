@@ -17,6 +17,10 @@ CC_UTIL.find_anim = function (path, referenceNode) {
 }
 
 
+CC_UTIL.find_progressbar = function (path, referenceNode) {
+    return cc.find(path, referenceNode).getComponent(cc.ProgressBar);
+}
+
 
 
 CC_UTIL.load_prefab = function (path, fn, parent) {

@@ -1,4 +1,4 @@
-require("../../logic/ui_base")
+require("../../util/ui_base")
 
 // 主界面
 cc.Class({

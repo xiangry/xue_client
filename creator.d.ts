@@ -2580,7 +2580,7 @@ declare module cc {
 	/** !#en
 	<p>
 	   ATTENTION: USE cc.director INSTEAD OF cc.Director.<br/>
-	   cc.director is a singleton object which manage your game's logic flow.<br/>
+	   cc.director is a singleton object which manage your game's util flow.<br/>
 	   Since the cc.director is a singleton, you don't need to call any constructor or create functions,<br/>
 	   the standard way to use it is by calling:<br/>
 	     - cc.director.methodName(); <br/>
@@ -2682,7 +2682,7 @@ declare module cc {
 		*/
 		getWinSizeInPixels(): Size;		
 		/**
-		!#en Pause the director's ticker, only involve the game logic execution.
+		!#en Pause the director's ticker, only involve the game util execution.
 		It won't pause the rendering process nor the event manager.
 		If you want to pause the entier game including rendering, audio and event,
 		please use {{#crossLink "Game.pause"}}cc.game.pause{{/crossLink}}
@@ -2722,7 +2722,7 @@ declare module cc {
 		*/
 		preloadScene(sceneName: string, onProgress?: (completedCount: number, totalCount: number, item: any) => void, onLoaded?: (error: Error) => void): void;		
 		/**
-		!#en Resume game logic execution after pause, if the current scene is not paused, nothing will happen.
+		!#en Resume game util execution after pause, if the current scene is not paused, nothing will happen.
 		!#zh 恢复暂停场景的游戏逻辑，如果当前场景没有暂停将没任何事情发生。 
 		*/
 		resume(): void;		
@@ -2745,7 +2745,7 @@ declare module cc {
 		*/
 		setClearColor(clearColor: Color): void;		
 		/**
-		!#en Returns current logic Scene.
+		!#en Returns current util Scene.
 		!#zh 获取当前逻辑场景。
 		
 		@example 
@@ -2828,7 +2828,7 @@ declare module cc {
 		/** !#en The event which will be triggered at the beginning of every frame.
 		!#zh 每个帧的开始时所触发的事件。 */
 		static EVENT_BEFORE_UPDATE: string;		
-		/** !#en The event which will be triggered after engine and components update logic.
+		/** !#en The event which will be triggered after engine and components update util.
 		!#zh 将在引擎和组件 “update” 逻辑之后所触发的事件。 */
 		static EVENT_AFTER_UPDATE: string;		
 		/** !#en The event is deprecated since v2.0, please use cc.Director.EVENT_BEFORE_DRAW instead
@@ -2972,14 +2972,14 @@ declare module cc {
 		step(): void;		
 		/**
 		!#en Pause the game main loop. This will pause:
-		game logic execution, rendering process, event manager, background music and all audio effects.
-		This is different with cc.director.pause which only pause the game logic execution.
+		game util execution, rendering process, event manager, background music and all audio effects.
+		This is different with cc.director.pause which only pause the game util execution.
 		!#zh 暂停游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。这点和只暂停游戏逻辑的 cc.director.pause 不同。 
 		*/
 		pause(): void;		
 		/**
 		!#en Resume the game from pause. This will resume:
-		game logic execution, rendering process, event manager, background music and all audio effects.
+		game util execution, rendering process, event manager, background music and all audio effects.
 		!#zh 恢复游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。 
 		*/
 		resume(): void;		
@@ -4728,7 +4728,7 @@ declare module cc {
 		Constructor for creating a pool for a specific node template (usually a prefab). You can pass a component (type or name) argument for handling event for reusing and recycling node.
 		!#zh
 		使用构造函数来创建一个节点专用的对象池，您可以传递一个组件类型或名称，用于处理节点回收和复用时的事件逻辑。
-		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse logic. !#zh 处理节点回收和复用事件逻辑的组件类型或名称。
+		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse util. !#zh 处理节点回收和复用事件逻辑的组件类型或名称。
 		
 		@example 
 		```js
@@ -6725,7 +6725,7 @@ declare module cc {
 		/**
 		!#en
 		Called before all scripts' update if the Component is enabled the first time.
-		Usually used to initialize some logic which need to be called after all components' `onload` methods called.<br/>
+		Usually used to initialize some util which need to be called after all components' `onload` methods called.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
 		!#zh
 		如果该组件第一次启用，则在所有组件的 update 之前调用。通常用于需要在所有组件的 onLoad 初始化完毕后执行的逻辑。<br/>
@@ -10779,7 +10779,7 @@ declare module cc {
 		static transformObb(out_bl: Vec2, out_tl: Vec2, out_tr: Vec2, out_br: Vec2, rect: Rect, anAffineTransform: AffineTransform): void;	
 	}	
 	/** A base node for CCNode, it will:
-	- maintain scene hierarchy and active logic
+	- maintain scene hierarchy and active util
 	- notifications if some properties changed
 	- define some interfaces shares between CCNode
 	- define machanisms for Enity Component Systems
@@ -10955,7 +10955,7 @@ declare module cc {
 		!#en
 		Removes a child from the container. It will also cleanup all running actions depending on the cleanup parameter. </p>
 		If the cleanup parameter is not passed, it will force a cleanup. <br/>
-		"remove" logic MUST only be on this method  <br/>
+		"remove" util MUST only be on this method  <br/>
 		If a class wants to extend the 'removeChild' behavior it only needs <br/>
 		to override this method.
 		!#zh
@@ -13310,37 +13310,37 @@ declare module cc {
 			static MOUSE_WHEEL: string;			
 			/** !#en The event type for position change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点位置改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static POSITION_CHANGED: string;			
 			/** !#en The event type for rotation change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点旋转改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static ROTATION_CHANGED: string;			
 			/** !#en The event type for scale change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点缩放改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static SCALE_CHANGED: string;			
 			/** !#en The event type for size change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点尺寸改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static SIZE_CHANGED: string;			
 			/** !#en The event type for anchor point change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点锚点改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static ANCHOR_CHANGED: string;			
 			/** !#en The event type for color change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
-			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
+			if the event callback have heavy util it may have great performance impact, try to avoid such scenario.
 			!#zh 当节点颜色改变时触发的事件。
 			性能警告：这个事件会在每次对应的属性被修改时触发，如果事件回调损耗较高，有可能对性能有很大的负面影响，请尽量避免这种情况。 */
 			static COLOR_CHANGED: string;			
@@ -17066,10 +17066,10 @@ declare module cc.js {
 		/**
 		!#en
 		Constructor for creating an object pool for the specific object type.
-		You can pass a callback argument for process the cleanup logic when the object is recycled.
+		You can pass a callback argument for process the cleanup util when the object is recycled.
 		!#zh
 		使用构造函数来创建一个指定对象类型的对象池，您可以传递一个回调函数，用于处理对象回收时的清理逻辑。
-		@param cleanupFunc the callback method used to process the cleanup logic when the object is recycled.
+		@param cleanupFunc the callback method used to process the cleanup util when the object is recycled.
 		@param size initializes the length of the array 
 		*/
 		constructor(cleanupFunc: (obj: any) => void, size: number);
