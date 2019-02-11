@@ -1,3 +1,9 @@
+require("./proto")
+
+const PlayerData = require("./obj/player_data")
+const PackageData = require("./obj/package_data")
+
+
 var XBDataCenter = cc.Class({
     name: "DataCenter",
     ctor: function () {
@@ -6,8 +12,18 @@ var XBDataCenter = cc.Class({
         this.age = 999999;
         this.exp = 9995558;
         this.status = EXBStatus.Learn;
+        this.player = new PlayerData();
+        this.package = new PackageData();
 
         this.listenServer();
+    },
+
+    GetPlayer: function(){
+        return this.player;
+    },
+
+    GetPackage: function(){
+        return this.package;
     },
 
     listenServer(){

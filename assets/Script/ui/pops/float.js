@@ -1,3 +1,4 @@
+// 浮窗提示信息
 cc.Class({
     extends: UIBaseView,
     name: "Float",
@@ -9,10 +10,10 @@ cc.Class({
     onLoad(){
         self = this
         this.lab_tip = CC_UTIL.find_label("mask/lab_tip", this.rootNode);
-
         this.lab_tip.string = self.params.text
 
         var anim =  CC_UTIL.find_anim("mask", this.rootNode);
+        console.log("anim -------- -------------", anim)
         anim.on("play", this.onAnimEvent, this)
         anim.on("finished", this.onAnimEvent, this)
         anim.play("float_move_stay")
@@ -22,10 +23,10 @@ cc.Class({
         console.log("onAnimEvent onAnimEvent", string);
         if (string === "finished"){
             UIManager.PopUi(EUI.Float)
-}
-},
-
-    onEnter(){
+        }
     },
 
+    onEnter(){
+
+    },
 })

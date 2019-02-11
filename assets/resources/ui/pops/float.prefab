@@ -23,13 +23,9 @@
     ],
     "_active": true,
     "_level": 1,
-    "_components": [
-      {
-        "__id__": 10
-      }
-    ],
+    "_components": [],
     "_prefab": {
-      "__id__": 11
+      "__id__": 9
     },
     "_opacity": 255,
     "_color": {
@@ -95,13 +91,10 @@
       },
       {
         "__id__": 7
-      },
-      {
-        "__id__": 8
       }
     ],
     "_prefab": {
-      "__id__": 9
+      "__id__": 8
     },
     "_opacity": 155,
     "_color": {
@@ -244,9 +237,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "f486f306-297d-4766-9ad8-a812e744d0a2"
+      "__uuid__": "6a64cd2d-9bb4-4401-81e0-9c5f20a38081"
     },
-    "fileId": "864ZwhoxZKiZH0kf+CAIvt",
+    "fileId": "37UATkCg5CVrPI5xeHVVt4",
     "sync": false
   },
   {
@@ -278,127 +271,19 @@
     "_id": ""
   },
   {
-    "__type__": "cc.Button",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "duration": 0.1,
-    "zoomScale": 1.2,
-    "clickEvents": [],
-    "_N$interactable": true,
-    "_N$enableAutoGrayEffect": false,
-    "_N$transition": 2,
-    "transition": 2,
-    "_N$normalColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$hoverColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "hoverColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$disabledColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
-    },
-    "_N$pressedSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
-    },
-    "pressedSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
-    },
-    "_N$hoverSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
-    },
-    "hoverSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
-    },
-    "_N$disabledSprite": {
-      "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
-    },
-    "_N$target": {
-      "__id__": 2
-    },
-    "_id": ""
-  },
-  {
     "__type__": "cc.Animation",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
-    },
-    "_enabled": true,
-    "_defaultClip": null,
-    "_clips": [
-      {
-        "__uuid__": "e45361ff-0378-4bb2-8ed3-880fa6608101"
-      }
-    ],
-    "playOnLoad": false,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "f486f306-297d-4766-9ad8-a812e744d0a2"
-    },
-    "fileId": "adaIOoNbZK3YGrfrzOQ73+",
-    "sync": false
-  },
-  {
-    "__type__": "cc.Animation",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
     },
     "_enabled": true,
     "_defaultClip": {
-      "__uuid__": "e45361ff-0378-4bb2-8ed3-880fa6608101"
+      "__uuid__": "f4b81c63-07ea-4fe3-80ad-6a42e5320b97"
     },
     "_clips": [
       {
-        "__uuid__": "e45361ff-0378-4bb2-8ed3-880fa6608101"
+        "__uuid__": "f4b81c63-07ea-4fe3-80ad-6a42e5320b97"
       }
     ],
     "playOnLoad": false,
@@ -410,9 +295,20 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "f486f306-297d-4766-9ad8-a812e744d0a2"
+      "__uuid__": "6a64cd2d-9bb4-4401-81e0-9c5f20a38081"
     },
-    "fileId": "30j2y0uHtNy6a2EGGTiYsw",
+    "fileId": "42/1JnwapA7Z2Bw1BUhLZV",
+    "sync": false
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "6a64cd2d-9bb4-4401-81e0-9c5f20a38081"
+    },
+    "fileId": "c21cwgHLpOupvMsdKxfdf2",
     "sync": false
   }
 ]
